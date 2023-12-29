@@ -60,6 +60,18 @@ class MainContentArea(ft.Container):
         )
         self.content = self.chat
 
+class maincontentareaBARU(MainContentArea):
+    def __init__(self):
+        super().__init__(**main_style())
+        return {
+    "width": 420,
+    "height": 450,
+    "bgcolor": "",
+    "border_radius": 10,
+    "padding": 15,
+}
+
+
 #Before pushing text to UI - create a class that generates the UI for the actual text prompts
 class CreateMessage(ft.Column):
     def __init__(self, name: str, message: str):
@@ -351,7 +363,7 @@ def tab1_content():
                         spacing=5,
                         controls=[
                             Text("Sign In Below", size=22, weight='bold'),
-                            Text("          Agora-AI", size=13, weight='bold'),
+                            Text("          selamat ujian", size=13, weight='bold'),
                         ],
                     ),
                     Divider(height=20, color='transparent'),
